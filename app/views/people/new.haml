@@ -72,6 +72,10 @@
     = form.label :password2, t('.password_again')
     = form.password_field :password2, :class => :text_field, :maxlength => "255"
 
+    -# Person Type
+    = form.label :person_type, ""
+    = form.hidden_field :person_type, :class => :text_field, :maxlength => "20", :id => "person_type", :value => ((params[:farmer] == true) ? 0 : 1)
+
     -# Terms
     .outer-checkbox-container
       .checkbox-container
