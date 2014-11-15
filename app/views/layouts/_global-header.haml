@@ -13,15 +13,16 @@
 
       .header-right
         = render :partial => "layouts/header_anchors", locals: {user: user}
-      /   = render :partial => "layouts/header_user_menu", locals: {unread_count: unread_count, user: user}
-      / = render :partial => "layouts/header_right_visible_tablet", locals: {unread_count: unread_count, user: user}
+        = render :partial => "layouts/header_user_menu", locals: {unread_count: unread_count, user: user}
+
+      //= render :partial => "layouts/header_right_visible_tablet", locals: {unread_count: unread_count, user: user}
 
     - with_available_locales do |locales|
       .header-right.visible-desktop
         #header-locales-menu.toggle.header-hover{data: {toggle: '#header-locales-toggle-menu', 'toggle-position' => 'absolute'}}
           %span.header-text-link
             = get_full_locale_name(I18n.locale).to_s
-            //= icon_tag("dropdown", ["icon-dropdown"])
+            = icon_tag("dropdown", ["icon-dropdown"])
         #header-locales-toggle-menu.toggle-menu.header-toggle-menu-language.hidden
           = render :partial => "layouts/locale_select", :collection => locales, :as => :loc_array
 
