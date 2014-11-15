@@ -1,4 +1,4 @@
-@import "compass/css3/box-sizing";
+@import "compass/css3/box-sizing"; 
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/text-shadow";
 @import "compass/css3/images";
@@ -330,7 +330,7 @@ form {
       padding: 0 0 0 lines(1);
       margin-top: lines(0.5) - em(3);
       margin-bottom: em(3);
-      font-weight: 600;
+      font-weight: 400;
     }
 
     label.radio {
@@ -363,7 +363,7 @@ form {
   display: block;
   margin-top: lines(0.5);
   margin-bottom: em(3);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 label {
@@ -1314,7 +1314,7 @@ a.lightbox-x {
 */
 
 .title-label {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /*
@@ -1919,7 +1919,7 @@ header.global-header {
   width: 100%;
 
   a, .toggle-menu-title {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .top-menu {
@@ -1965,7 +1965,7 @@ header.network-header {
       top: em(16);
       text-align: right;
       color: $network-red;
-      font-weight: 600;
+      font-weight: 400;
     }
   }
 
@@ -2002,11 +2002,11 @@ ul.network-navi {
 footer {
   position: relative;
   color: $network-red;
-  font-weight: 600;
+  font-weight: 400;
   padding: lines(1) 0 lines(1) 0;
 
   a {
-    font-weight: 600;
+    font-weight: 400;
     color: $network-red;
     &:hover {
       color: darken($network-red, 20%);
@@ -2291,7 +2291,7 @@ section.about, section.how-it-works, section.create-now {
 
   h2 {
     @include normal-type;
-    font-weight: 600;
+    font-weight: 400;
     color: $body;
   }
 

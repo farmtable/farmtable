@@ -4,7 +4,7 @@
   - else
     initialize_contact_request_form("Oops! You forgot to give your email address.","It seems the email you gave is not valid, please double check.");
 
-%section.lander
+%section.lander 
   .coverimage
     %figure.network-cover.fluidratio
   .wrapper
@@ -14,12 +14,12 @@
           = render :partial => "contact_request_form", :locals => { :prefix => "top" }
       - else
         .lander-content.network-lander-content
-          %h1 Create a marketplace.
+          %h1 FARMTABLE
           %p.lander-description
             Let your community sell, rent, swap and
             %br/
             share goods and services online.
-          = render :partial => "contact_request_form", :locals => { :prefix => "top" }
+            = render :partial => "contact_request_form", :locals => { :prefix => "top" }
 
 %section.about{:id => "about"}
   .wrapper
