@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141115061529) do
+ActiveRecord::Schema.define(:version => 20141115062735) do
 
   create_table "auth_tokens", :force => true do |t|
     t.string   "token"
@@ -749,7 +749,7 @@ ActiveRecord::Schema.define(:version => 20141115061529) do
     t.integer  "min_days_between_community_updates",               :default => 1
     t.boolean  "is_organization"
     t.string   "organization_name"
-    t.integer  "user_type",                                        :default => 0
+    t.integer  "person_type",                                      :default => 0
   end
 
   add_index "people", ["email"], :name => "index_people_on_email", :unique => true

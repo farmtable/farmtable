@@ -38,7 +38,7 @@
 #  min_days_between_community_updates :integer          default(1)
 #  is_organization                    :boolean
 #  organization_name                  :string(255)
-#  user_type                          :integer          default(0)
+#  person_type                        :integer          default(0)
 #
 # Indexes
 #
