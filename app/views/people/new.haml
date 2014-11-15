@@ -74,7 +74,7 @@
 
     -# Person Type
     = form.label :person_type, ""
-    = form.hidden_field :person_type, :class => :text_field, :maxlength => "20", :id => "person_type", :value => ((params[:farmer] == true) ? 0 : 1)
+    = form.hidden_field :person_type, :class => :text_field, :maxlength => "20", :id => "person_type", :value => ((params[:farmer] == true) ? 1 : 0)
 
     -# Terms
     .outer-checkbox-container
