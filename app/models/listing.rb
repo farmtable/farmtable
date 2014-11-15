@@ -34,6 +34,7 @@
 #  price_cents         :integer
 #  currency            :string(255)
 #  quantity            :string(255)
+#  growing_method      :string(255)
 #
 # Indexes
 #
