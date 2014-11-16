@@ -47,7 +47,11 @@ class ListingsController < ApplicationController
   end
 
   def checkout
-    render :partial => "listings/checkout"
+    @cart_items = []
+    items = begin JSON.parse(session[:items]) rescue nil end
+    if items.present?
+      @cart_items = items.collect{|i| Listing.find_by_id(i)}
+    end
   end
 
   def listing_bubble
