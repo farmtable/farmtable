@@ -239,11 +239,6 @@ When(/^I set the expiration date to (\d+) months from now$/) do |months|
   select_date_from_date_selector(months.to_i.months.from_now, "listing_valid_until")
 end
 
-When(/^I (?:buy) that listing$/) do
-  visit(path_to "the listing page")
-  find(".book-button").click
-end
-
 When(/^I select category "(.*?)"$/) do |category_name|
   page.should have_content("Select category")
   click_link(category_name)

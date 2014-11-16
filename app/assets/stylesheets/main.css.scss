@@ -2524,6 +2524,9 @@ section.create-now {
 
   .marketplace-lander-content {
     top: lines($lander-content-top-mobile);
+    p {
+      background-color: rgba(0, 0, 0, .5);
+    }
   }
 
   .marketplace-lander-content-title {

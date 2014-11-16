@@ -69,7 +69,7 @@ en:
         edit_info: "Edit information"
         see_how_it_looks_like: "See how it looks"
         verification_to_post_listings_info_content: "Info text to non-verified users"
-        verification_to_post_listings_info_content_description: "You currently require your users to be verified manually by you before they can post listings. Here you can set the default text that is shown to non-verified users when they try to post a new listing."
+        verification_to_post_listings_info_content_description: "You currently require your users to be verified manually by you before they can post listings. Here you can set the default text that is shown to non-verified users when they try to Create a new item."
         verification_to_post_listings_info_content_default: "%{service_name} requires people to be verified manually by admin before they can post listings. You have not yet been verified. Please %{contact_admin_link} to be verified."
         contact_admin_link_text: "contact the admin"
         save: "Save settings"
@@ -329,15 +329,15 @@ en:
       inquiry: Inquiry
       share_for_free: "Sharing for free"
       default_action_button_labels:
-        sell: Buy
+        sell: Add to Cart
         rent: Rent
         request: Offer
         offer: Request
         inquiry: Contact
   common:
     edit_page: "Edit page"
-    default_community_slogan: "Community marketplace"
-    default_community_description: "This is a place to sell, rent, swap and share goods and services with the other members of the marketplace."
+    default_community_slogan: "Welcome to Farmtable"
+    default_community_description: "An online marketplace for local farms to connect with local restaurants"
     cancel: Cancel
     fields_that_are_mandatory: "Fields marked with star (*) are mandatory."
     or: or
@@ -744,7 +744,7 @@ en:
       title_link_text: "%{community_name}"
       intro_paragraph: "Here are some of the things that happened on %{community_link} during the past %{time_since_last_update}."
       intro_paragraph_link_text: "%{community_name}"
-      post_a_new_listing: "Post a new listing!"
+      post_a_new_listing: "Create a new item!"
       reduce_email_footer_text: "Too much email? %{settings_link} or %{unsubscribe_link}."
       settings_link_text: "Edit your email settings here"
       unsubscribe_link_text: unsubscribe
@@ -1274,7 +1274,7 @@ en:
         comma_separate: "(comma separate)"
         tags: Tags
       title:
-        listing_title: "Listing title"
+        listing_title: "Item Name"
       valid_until:
         valid_until: "Expiration date"
       valid_until_radio_buttons:
@@ -1334,7 +1334,7 @@ en:
       booking_to: To
       how_paypal_works: "How PayPal Works"
     new:
-      post_a_new_listing: "Post a new listing"
+      post_a_new_listing: "Create a new item"
       listing: listing
       selected_category: "Category: %{category}"
       selected_subcategory: "Subcategory: %{subcategory}"
@@ -1504,8 +1504,8 @@ en:
       inactive_description: "This user has stopped using %{service_name}. You cannot contact this user, give feedback to them or comment their listings."
     new:
       captcha_incorrect: "reCAPTCHA check failed. Please write the words in the image to the box below."
-      captcha_was_wrong: "Captcha text was incorrect."
-      create_new_account: "Create account"
+      captcha_was_wrong: Create "Captcha text was incorrect."
+      create_new_account: "account"
       email: "Email address"
       email_is_in_use: "The email you gave is already in use."
       email_is_in_use_or_not_allowed: "This email is not allowed or it is already in use. If you can't get in, contact us."
@@ -1523,7 +1523,7 @@ en:
       organization_name: "Organization name"
       password_again: "Confirm password"
       show_my_name_to_others: "Show my real name to other %{service_name} users"
-      sign_up: "Create a new %{service_name} account"
+      sign_up: "Create a new farmtable account"
       terms: "terms of use"
       username_is_in_use: "This username is already in use."
       username_is_invalid: "Username is invalid. Allowed characters are letters, numbers and underscore."
@@ -1607,7 +1607,7 @@ en:
       create_new_account: "Create a new account"
       i_forgot_my_password: "Username or password forgotten"
       login: "Log in"
-      login_to_kassi: "Log in to %{service_name}"
+      login_to_kassi: "Log in to farmtable"
       connect_your_facebook_to_kassi: "Connect your Facebook account to %{service_name}"
       facebook_account: "Facebook account:"
       log_in_to_link_account: "If you already have a %{service_name} account, log in to link it with your Facebook account."
