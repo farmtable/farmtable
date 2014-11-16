@@ -6,7 +6,7 @@ class HomepageController < ApplicationController
   skip_filter :dashboard_only
 
   APP_DEFAULT_VIEW_TYPE = "grid"
-  VIEW_TYPES = ["grid", "list", "map"]
+  VIEW_TYPES = ["grid", "map"]
 
   def index
     ## Support old /?map=true URL START

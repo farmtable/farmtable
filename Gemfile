@@ -19,6 +19,8 @@ gem 'compass-rails'
 
 gem 'jquery-rails', '2.1.4'
 
+gem "font-awesome-rails"
+
 # Bundle the extra gems:
 
 # gem 'heroku' install the Heroku toolbelt (https://toolbelt.heroku.com/) instead (as gem had some problems)
@@ -92,7 +94,7 @@ group :development, :test do
   gem 'rubocop',          require: false
   gem 'factory_girl_rails'
 end
-
+ 
 group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
@@ -128,6 +130,9 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-stack_explorer'
 end
+
+gem 'acts_as_shopping_cart', :github => 'crowdint/acts_as_shopping_cart', :branch => '0-1-x'
+
 
 gem 'strong_parameters'
 

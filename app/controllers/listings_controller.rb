@@ -46,6 +46,10 @@ class ListingsController < ApplicationController
     redirect_to root
   end
 
+  def checkout
+    render :partial => "listings/checkout"
+  end
+
   def listing_bubble
     if params[:id]
       @listing = Listing.find(params[:id])

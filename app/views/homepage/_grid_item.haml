@@ -9,3 +9,5 @@
         = small_avatar_thumb(listing.author, :class => "home-fluid-thumbnail-grid-author-avatar-image")
       = link_to(listing.author, :class => "home-fluid-thumbnail-grid-author-name") do
         = listing.author.name(@current_community)
+        = link_to raw('Add to cart'), "#", :data => listing.id, :class => "add-item-link", :title => 'Add Item to Cart'
+
