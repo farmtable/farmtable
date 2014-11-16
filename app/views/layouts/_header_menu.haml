@@ -16,10 +16,10 @@
     = icon_tag("feedback", ["icon-with-text"])
     = t("header.contact_us")
 
-  - with_invite_link do
-    = link_to new_invitation_path do
-      = icon_tag("invite", ["icon-with-text"])
-      = t("header.invite")
+  / - with_invite_link do
+  /   = link_to new_invitation_path do
+  /     = icon_tag("invite", ["icon-with-text"])
+  /     = t("header.invite")
 
   - Maybe(@current_community).menu_links.each do |menu_links|
     - menu_links.each do |menu_link|
