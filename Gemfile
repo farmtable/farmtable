@@ -130,4 +130,7 @@ group :development, :test do
   gem 'pry-stack_explorer'
 end
 
+gem 'acts_as_shopping_cart', :github => 'crowdint/acts_as_shopping_cart', :branch => '0-1-x'
+
+
 gem 'strong_parameters'

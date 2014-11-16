@@ -16,6 +16,10 @@ Kassi::Application.routes.draw do
 
   match "/design" => "design#design"
 
+  # don't really have time so im just going to hack this sucker together
+  # don't forget the community id
+  post 'carts/add' => 'api/carts#add'
+
   # config/routes.rb
   if Rails.env.development?
     mount MailPreview => 'mail_view'
@@ -80,6 +84,7 @@ Kassi::Application.routes.draw do
     match "/confirmation_pending" => "sessions#confirmation_pending", :as => :confirmation_pending
     match "/login" => "sessions#new", :as => :login
     match "/listing_bubble/:id" => "listings#listing_bubble", :as => :listing_bubble
+    match "/checkout" => "listings#checkout", :as => :checkout_items
     match "/listing_bubble_multiple/:ids" => "listings#listing_bubble_multiple", :as => :listing_bubble_multiple
     match '/:person_id/settings/payments/braintree/new' => 'braintree_accounts#new', :as => :new_braintree_settings_payment
     match '/:person_id/settings/payments/braintree/show' => 'braintree_accounts#show', :as => :show_braintree_settings_payment
@@ -89,8 +94,8 @@ Kassi::Application.routes.draw do
     match '/:person_id/settings/payments/paypal_account/create' => 'paypal_accounts#create', :as => :create_paypal_account_settings_payment
 
     scope :module => "api", :constraints => ApiRequest do
-      resources :listings, :only => :index
-
+      resources :listings, :only => :index 
+      resources :carts
       match 'api_version' => "api#version_check"
       match '/' => 'dashboard#api'
     end
@@ -276,6 +281,7 @@ Kassi::Application.routes.draw do
       end
 
       resources :people, :path => "" do
+
         member do
           put :activate
           put :deactivate

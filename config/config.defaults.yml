@@ -28,7 +28,7 @@ default: &default_settings
 
   # Sharetribe can allow accessing data from external applications by RESTful API
   # You can enable the API by setting this value true
-  api_enabled: false
+  api_enabled: true
 
   # You can use Amazong S3 to store listing and profile images
   # If you leave following empty, the images will be stored in local file system

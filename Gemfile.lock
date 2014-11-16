@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/crowdint/acts_as_shopping_cart.git
+  revision: ce656b5f0247836094acb6a857252b2c1507d061
+  branch: 0-1-x
+  specs:
+    acts_as_shopping_cart (0.1.6)
+      activerecord (> 3)
+
+GIT
   remote: git://github.com/pat/ts-delayed-delta.git
   revision: 839284f2f28b3f4caf3a3bf5ccde9a6d222c7f4d
   ref: 839284f2f28b3f4caf3a3bf5ccde9a6d222c7f4d
@@ -496,6 +504,7 @@ PLATFORMS
 
 DEPENDENCIES
   action_mailer_cache_delivery
+  acts_as_shopping_cart!
   airbrake (~> 4.1.0)
   annotate
   asset_sync
@@ -582,4 +591,3 @@ DEPENDENCIES
   will_paginate
   xpath
   zeus (= 0.15.1)
-  

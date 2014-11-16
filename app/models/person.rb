@@ -96,6 +96,8 @@ class Person < ActiveRecord::Base
   has_one :braintree_account, :dependent => :destroy
   has_one :checkout_account, dependent: :destroy
 
+  has_one  :cart, dependent: :destroy
+  
   has_many :participations, :dependent => :destroy
   has_many :conversations, :through => :participations, :dependent => :destroy
   has_many :authored_testimonials, :class_name => "Testimonial", :foreign_key => "author_id", :dependent => :destroy
@@ -114,6 +116,8 @@ class Person < ActiveRecord::Base
   has_many :followed_people, :through => :inverse_follower_relationships, :source => "person"
 
   has_and_belongs_to_many :followed_listings, :class_name => "Listing", :join_table => "listing_followers"
+
+  after_save :create_cart
 
   def to_param
     username
@@ -183,6 +187,15 @@ class Person < ActiveRecord::Base
   before_validation(:on => :create) do
     self.id = UUID.timestamp_create.to_s22
     set_default_preferences unless self.preferences
+  end
+
+  # Creates a cart for the user
+  def create_cart
+    unless self.cart
+      c = Cart.create
+      c.person_id = self.id
+      c.save
+    end
   end
 
   # Creates a new email
