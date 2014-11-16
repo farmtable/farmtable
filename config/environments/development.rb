@@ -40,7 +40,6 @@ Kassi::Application.configure do
   end
 
   config.active_support.deprecation = :log
-  config.assets.prefix = "/assets_dev"
   # Do not compress assets
   config.assets.compress = false
 

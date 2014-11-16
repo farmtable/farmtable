@@ -1,3 +1,6 @@
+window.ST = window.ST || {};
+
+
 $(document).ready(function(){
   $('.add-item-link').click(function(){
     var item = $(this)[0].attributes.data.value;
