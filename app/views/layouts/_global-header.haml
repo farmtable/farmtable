@@ -36,15 +36,14 @@
       .header-right
         = link_to login_path, class: "header-text-link header-hover", id: "header-login-link" do
           = t("header.login")
-
     .header-left.hidden-tablet
       .header-menu-container.toggle.hidden{data: {toggle: '#header-menu-toggle-menu', 'toggle-position' => 'absolute'}}
+      - if @current_user && @current_user.person_type == 1
         #header-menu-mobile-anchor.header-menu-toggle-container.toggle-header-container
           = icon_tag("rows", ["header-menu-icon"])
           %span.visible-tablet-inline
             = t("header.menu")
-
-    = render :partial => "layouts/header_menu"
+      = render :partial => "layouts/header_menu"
 
     -#
       If necessary, the buttons will overlap with the logo. Buttons should be on top, that's

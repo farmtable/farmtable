@@ -708,6 +708,13 @@ function initialize_reply_form(locale) {
 }
 
 function initialize_listing_view(locale) {
+  $('.add-item-btn').click(function(){
+    var item = $(this)[0].attributes.data.value;
+    $.post("/carts/add?community_id=1", {"item_id" : item}, function(data) {
+      console.log(data);
+    });
+  });
+
   $('#listing-image-link').click(function() { $('#listing-image-lightbox').lightbox_me({centered: true, zIndex: 1000000}); });
   auto_resize_text_areas("listing_comment_content_text_area");
   $('textarea').focus();
