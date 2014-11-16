@@ -115,8 +115,10 @@ gem 'win32-process', :platforms => [:mswin, :mingw]
 - sudo aptitude install mysql-server-5.5
 - sudo mysql_secure_installation
 - <execute 2 production SQL commands>
-- emacs config/database.yml
-	- edit the pw of "sharetribe_production"
+  -  create a user with matching password
+  -  grant user a db
+- emacs config/database.yml (you may have to copy over from database.example.yml)
+	- edit the sharetribe_development object to match mysql user name, pw and dbname
 - cp config/config.example.yml config/config.yml
 - emacs config/config.yml
 	- check all once
