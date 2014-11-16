@@ -254,7 +254,7 @@ test:
 
   # The domain should be set to lvh.me:9887 (which redirects to localhost)
   # to be able to run the tests with subdomains.
-  domain: lvh.me:9887
+  domain: jonah.in
   # NOTE: If you are running tests without internet connection, you might need to modify your hosts file.
   # And add lines: (where there is one tab separating the ip and the domain)
   #127.0.0.1       lvh.me
