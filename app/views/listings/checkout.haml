@@ -1,0 +1,22 @@
+- content_for :javascript do
+  initialize_checkout();
+
+
+
+%h2.design-h2
+  = "Checkout"
+
+
+%table
+  %thead
+    %tr
+      %th= "Name"
+  %tbody
+  - @cart_items.each do |row|
+    %tr
+    - if row.present?
+      %td= row.title
+
+%a.button
+  .content.purchase-button
+    = "Purchase items"

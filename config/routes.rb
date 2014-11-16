@@ -20,6 +20,8 @@ Kassi::Application.routes.draw do
   # don't forget the community id
   post 'carts/add' => 'api/carts#add'
 
+  post 'carts/purchase' => 'api/carts#purchase'
+
   # config/routes.rb
   if Rails.env.development?
     mount MailPreview => 'mail_view'
@@ -95,7 +97,6 @@ Kassi::Application.routes.draw do
 
     scope :module => "api", :constraints => ApiRequest do
       resources :listings, :only => :index 
-      resources :carts
       match 'api_version' => "api#version_check"
       match '/' => 'dashboard#api'
     end

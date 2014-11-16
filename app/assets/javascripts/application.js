@@ -61,7 +61,6 @@
 //= require thumbnail_stripe
 //= require listing
 //= require listing_images
-//= require cart
 //= require datepicker
 //= require follow
 //= require paypal_account_settings

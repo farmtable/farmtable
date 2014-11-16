@@ -1458,7 +1458,7 @@ function enableSamePageScroll() {
       } else {
         $scrollElement.scrollTop(1);
         var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
+        $scrollElement.scrollTop(0);    
         if (isScrollable) {
           return el;
         }
@@ -1466,4 +1466,12 @@ function enableSamePageScroll() {
     }
     return [];
   }
+}
+
+function initialize_checkout() {
+  $('.purchase-button').click(function(){
+    $.post("/carts/purchase?community_id=1", function(data) {
+      //bring us to the invoice page
+    });
+  });
 }
