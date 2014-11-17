@@ -2,6 +2,8 @@ class Api::CartsController < Api::ApiController
   include ListingsHelper
   before_filter :require_community
 
+  respond_to :html, :xml, :json, :pdf
+
   def add
     # add item to session
     item_id = params["item_id"]
@@ -19,6 +21,21 @@ class Api::CartsController < Api::ApiController
     cart.person_id = @current_user.id
     cart.save
     render json: {"items" => @current_user.current_cart.cart_items}
+  end
+
+  def invoice
+    Payday::Config.default.company_name = "FARMTABLE"
+    invoice = Payday::Invoice.new(:invoice_number => @current_user.current_cart.id)
+    @current_user.current_cart.cart_items.each do |row|
+      listing = Listing.find_by_id(row.item_id)
+      invoice.line_items << Payday::LineItem.new(:price => listing.price, :quantity => row.quantity, :description => listing.title)
+    end
+    respond_to do |format|
+      format.html
+      format.pdf do
+        send_data invoice.render_pdf, :filename => "Invoice #12.pdf", :type => "application/pdf", :disposition => "inline"
+      end
+    end
   end
 
 end

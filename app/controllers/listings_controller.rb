@@ -51,6 +51,10 @@ class ListingsController < ApplicationController
     @cart_items = items
   end
 
+  def invoice
+
+  end
+
   def listing_bubble
     if params[:id]
       @listing = Listing.find(params[:id])
