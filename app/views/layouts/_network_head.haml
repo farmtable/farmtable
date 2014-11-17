@@ -18,6 +18,7 @@
 
 / Modernizr, in the head tag, right after stylesheets, for best performance:
 = javascript_include_tag "modernizr.min"
+= javascript_include_tag "landing"
 
 / Android pre Jellybean has an ugly bug, which prevents font-size 0 technique from
 / removing the spaces between inline-blocks. Remove this piece of code when pre Jellybean becomes unsupported
@@ -29,6 +30,7 @@
       return androidversion < 4.1
     }
   });
+
 
 = csrf_meta_tag
 
