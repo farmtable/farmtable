@@ -14,7 +14,7 @@
         %a.elegant-button
           Enter Now
 
-%section.about{:id => "introduction"}
+%section.about{:id => "about"}
   .wrapper
     .about-content
       %h2
@@ -24,14 +24,14 @@
         Never before have more businesses shopped local for promoting healthy eating. We streamline the process for connecting restaurants and farms so everyone can focus on the bottom line- to serve customers. By using the power of technology we are working to support the best local farmers get a direct link to the end consumer.
       %br/
       %br/
-      %a.elegant-button-dark
-        Producers
-      %a.elegant-button-dark
-        Buyers 
+      .elegant-button-dark 
+        = link_to "PRODUCERS", "#producers"
+      .elegant-button-dark
+        = link_to "BUYERS", "#buyers"
 
 
 
-%section.about{:id => "about"}
+%section.about{:id => "producers"}
   .wrapper
     .about-content
       %h2
@@ -68,9 +68,14 @@
               Allow your users to pay through the
               platfom and take a fee from
               each transaction.
+        %br/
+        %br/
+        %br/
+        %a.elegant-button-dark
+          JOIN AS A PRODUCER
 
 
-%section.about{:id => "aboutb"}
+%section.about{:id => "buyers"}
   .wrapper
     .about-content
       %h2
@@ -107,6 +112,11 @@
               Allow your users to pay through the
               platfom and take a fee from
               each transaction.
+      %br/
+      %br/
+      %br/
+      %a.elegant-button-dark
+        JOIN AS A BUYER
 
 
 = render :partial => "layouts/google_analytics_script" unless on_dashboard?
