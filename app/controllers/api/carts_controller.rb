@@ -4,10 +4,10 @@ class Api::CartsController < Api::ApiController
 
   def add
     # add item to session
-    items = begin JSON.parse(session[:items]) rescue [] end
-    items = items.push(params["item_id"])
-    session[:items] = items.to_json
-    render json: {"items" => session[:items]}
+    item_id = params["item_id"]
+    item = Listing.find_by_id(item_id)
+    @current_user.cart.add(item, item.price)
+    render json: {"items" => @current_user.cart.cart_items}
   end
 
   def purchase
