@@ -4,6 +4,23 @@
   = link_to person_path(user) do
     = icon_tag("user", ["icon-with-text"])
     = t("header.profile")
+  
+  = link_to new_listing_path do
+    = icon_tag("new_listing", ["icon-with-text"])
+    = t("homepage.index.post_new_listing")
+
+  = link_to about_infos_path do
+    = icon_tag("information", ["icon-with-text"])
+    = t("header.about")
+
+  = link_to new_user_feedback_path do
+    = icon_tag("feedback", ["icon-with-text"])
+    = t("header.contact_us")
+
+  - if @current_user && @current_community && @current_user.has_admin_rights_in?(@current_community)
+    = link_to edit_details_admin_community_path(@current_community) do
+      = icon_tag("admin", ["icon-with-text"])
+      = t("layouts.logged_in.admin")
 
   = link_to logout_path do
     = icon_tag("logout", ["icon-with-text"])
