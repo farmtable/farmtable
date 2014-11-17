@@ -142,3 +142,5 @@ group :development do
 	gem 'capistrano-rails', '~> 1.1.1'
 	gem 'capistrano-rvm', github: "capistrano/rvm"
 end
+
+gem "payday"

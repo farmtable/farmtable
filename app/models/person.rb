@@ -199,7 +199,7 @@ class Person < ActiveRecord::Base
   end
 
   def current_cart
-    self.cart
+    Cart.where("person_id = ? AND status != 1", self.id).first
   end
 
   # Creates a new email

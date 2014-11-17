@@ -47,11 +47,8 @@ class ListingsController < ApplicationController
   end
 
   def checkout
-    @cart_items = []
-    items = begin JSON.parse(session[:items]) rescue nil end
-    if items.present?
-      @cart_items = items.collect{|i| Listing.find_by_id(i)}
-    end
+    items = @current_user.current_cart.cart_items
+    @cart_items = items
   end
 
   def listing_bubble
