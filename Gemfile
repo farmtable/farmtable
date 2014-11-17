@@ -65,7 +65,7 @@ gem 'rake'
 gem 'xpath'
 gem 'dynamic_form'
 gem "truncate_html"
-gem 'money-rails'
+gem 'money-rails', ' >=0.9.0'
 gem 'mercury-rails'
 gem 'fb-channel-file'
 gem 'country_select', '> 1.2.0'
@@ -142,3 +142,5 @@ group :development do
 	gem 'capistrano-rails', '~> 1.1.1'
 	gem 'capistrano-rvm', github: "capistrano/rvm"
 end
+
+gem "payday", :github =>'farmtable/payday'

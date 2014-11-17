@@ -22,6 +22,8 @@ Kassi::Application.routes.draw do
 
   post 'carts/purchase' => 'api/carts#purchase'
 
+  get 'carts/invoice' => 'api/carts#invoice'
+
   # config/routes.rb
   if Rails.env.development?
     mount MailPreview => 'mail_view'

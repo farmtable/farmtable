@@ -198,6 +198,10 @@ class Person < ActiveRecord::Base
     end
   end
 
+  def current_cart
+    Cart.where("person_id = ? AND status != 1", self.id).first
+  end
+
   # Creates a new email
   def email_attributes=(attributes)
     emails.build(attributes)

@@ -10,13 +10,16 @@
 %table
   %thead
     %tr
-      %th= "Name"
+      %th= "Product"
+      %th= "Price"
+      %th= "Quantity"
   %tbody
   - @cart_items.each do |row|
     %tr
     - if row.present?
-      %td= row.title
-
+      %td= Listing.find_by_id(row.item_id).title
+      %td= Listing.find_by_id(row.item_id).price
+      %td= row.quantity
 %a.button
   .content.purchase-button
     = "Purchase items"
