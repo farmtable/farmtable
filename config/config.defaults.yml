@@ -181,7 +181,7 @@ default: &default_settings
   # Global Service name
   # If you want to call this service with different name on this server, you can specify it here
   # This can also be set community specific in community.settings["service_name"]
-  global_service_name: Sharetribe
+  global_service_name: FarmTable
 
   # Icon set
   # By default Sharetribe uses the Font Awesome Icon Pack
@@ -192,7 +192,7 @@ default: &default_settings
 
   # The default consent (terms of use) all the communities will use.
   # It's just a string that tells the version of the consent.
-  consent: "SHARETRIBE1.0"
+  consent: "FARMTABLE1.0"
 
   # If you need to turn off the service for a while (so that people can't modify data)
   # you can show the maintenance page on every pageload by turning on the following
