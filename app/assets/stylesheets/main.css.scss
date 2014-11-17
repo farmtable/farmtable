@@ -2070,7 +2070,7 @@ footer {
 section.lander, section.create-now {
 
   figure.network-cover {
-    background-image: url(image-path($landing-photo-url));
+    background-image: url(image-path($cover-photo-url));
     height: em(600);
     @include media(tablet) {
       @include fluid-ratio(em(1920) em(822), em(300) em(822));
@@ -2285,8 +2285,8 @@ section.create-now {
   }
 }
 
-section.about{
-  // padding: lines(3) 0 lines(3) 0;
+section.about, section.how-it-works, section.create-now {
+  padding: lines(3) 0 lines(3) 0;
   color: $body;
 
   h2 {
@@ -2707,4 +2707,6 @@ section.create-now {
 }
 
 
-
+.network-header-content-container{
+  font-family: 'Open Sans';
+}

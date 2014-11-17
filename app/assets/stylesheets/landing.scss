@@ -6,8 +6,6 @@
 // 	margin-bottom: 0;
 // 	max-width: 62.5rem;
 // }
-$producer-photo-url: "/assets/landing/pepper.jpg";
-$buyer-photo-url: "/assets/landing/res.jpg";
 
 .footer-icon-container {
 	display: block;
@@ -30,9 +28,6 @@ $buyer-photo-url: "/assets/landing/res.jpg";
 
 .elegant-button{
 	&:hover{
-		a{
-			color: #fff;
-		}
 		color: rgba(0,0,0,0.6);
 		background-color: rgba(255,255,255,0.6);
 	}
@@ -60,9 +55,6 @@ $buyer-photo-url: "/assets/landing/res.jpg";
 
 .elegant-button-dark{
 	&:hover{
-		a{
-			color: #fff;
-		}
 		color: #fff;
 		background-color: rgba(0,0,0,0.6);
 	}
@@ -97,31 +89,3 @@ header.network-header a{
 footer a{
 	margin: 0 0.55em;
 }
-
-header.network-header{
-	border: none;
-}
-
-.producerimg{
-	background-image: url(image-path($producer-photo-url));
-	min-height: 400px;
-}
-
-.buyerimg{
-	background-image: url(image-path($buyer-photo-url));
-	min-height: 400px;
-}
-
-.producertext, .buyertext{
-	margin: 120px;
-	font-family: 'Impact';
-	font-size: 3.5em;
-	color: rgba(255, 255, 255, 0.8);
-	position: relative;
-	top: 120px;
-}
-
-section.about{
-	padding:3em !important;
-}
-
