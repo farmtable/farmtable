@@ -33,7 +33,7 @@
       .home-toolbar-show-filters-button-container
         .home-toolbar-show-filters-button#home-toolbar-show-filters
           = t(".filter")
-
+  /
     .home-toolbar-button-group{:class => @transaction_type_menu_enabled || @category_menu_enabled ? "filters-enabled" : ""}
       - ["grid", "map"].each do |view_type|
         - selected_class = @view_type == view_type ? "selected" : ""
