@@ -11,18 +11,14 @@ class Api::CartsController < Api::ApiController
   end
 
   def purchase
-    items = begin JSON.parse(session[:items]) rescue [] end
-    unless items.empty?
-      c = @current_user.cart
-      c.items = items
-      c.person_id = nil
-      c.save
-      cart = Cart.create
-      cart.person_id = @current_user.id
-      cart.save
-      session[:items] = ""
-    end
-    render json: {"status" => 200}
+    current_cart = @current_user.current_cart
+    # do something like invoice
+    current_cart.status = 1
+    current_cart.save
+    cart = Cart.create
+    cart.person_id = @current_user.id
+    cart.save
+    render json: {"items" => @current_user.current_cart.cart_items}
   end
 
 end

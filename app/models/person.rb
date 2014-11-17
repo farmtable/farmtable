@@ -198,6 +198,10 @@ class Person < ActiveRecord::Base
     end
   end
 
+  def current_cart
+    self.cart
+  end
+
   # Creates a new email
   def email_attributes=(attributes)
     emails.build(attributes)

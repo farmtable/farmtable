@@ -7,6 +7,7 @@
 #  updated_at :datetime         not null
 #  person_id  :integer
 #  items      :text
+#  status     :integer          default(0)
 #
 
 class Cart < ActiveRecord::Base
