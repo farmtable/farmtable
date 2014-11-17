@@ -6,6 +6,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  person_id  :integer
+#  items      :text
 #
 
 require 'spec_helper'
