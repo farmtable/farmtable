@@ -2070,7 +2070,7 @@ footer {
 section.lander, section.create-now {
 
   figure.network-cover {
-    background-image: url("https://s3.amazonaws.com/sharetribe/cover_photos/network/bg_photo_shadow.jpg");
+    background-image: url(image-path($cover-photo-url));
     height: em(600);
     @include media(tablet) {
       @include fluid-ratio(em(1920) em(822), em(300) em(822));
@@ -2328,8 +2328,6 @@ section.about, section.how-it-works, section.create-now {
 
 section.about, section.create-now {
   background: $light_grey;
-  border-top: 3px solid $network-red;
-  border-bottom: 3px solid $network-red;
 }
 
 section.about {
@@ -2394,8 +2392,9 @@ section.about {
     }
 
     .about-column-title-text {
-      @include huge-type;
+      @include large-type;
       font-weight: 400;
+      font-family: 'Open Sans';
     }
 
     .about-column-content p {
@@ -2406,33 +2405,6 @@ section.about {
 
 }
 
-section.how-it-works {
-
-  .how-it-works-content {
-    width: 100%;
-    text-align: center;
-  }
-
-  .video-container {
-    margin-top: lines(3);
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: em(30);
-    height: 0;
-    overflow: hidden;
-  }
-
-  .video-container iframe,
-  .video-container object,
-  .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-}
 
 section.create-now {
 
