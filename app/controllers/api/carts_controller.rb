@@ -7,8 +7,10 @@ class Api::CartsController < Api::ApiController
   def add
     # add item to session
     item_id = params["item_id"]
-    req_quant = params["req_quant"]
+    req_quant = params["req_quant"].to_i
     item = Listing.find_by_id(item_id)
+    unless @current_user.current_cart
+      @current_user.current_cart = Cart.create
     @current_user.current_cart.add(item_id, item.price, req_quant)
     render json: {"items" => @current_user.cart.cart_items}
   end
