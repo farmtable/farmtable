@@ -1,11 +1,16 @@
 # Farmtable
 
 ## Super admin
-'''
+```
 username: dev
 pwd: 2Farm5You!
-'''
+```
 
+## Enable user
+```
+rails console
+Email.last.update_attribute :confirmed_at, Time.now
+```
 # Sharetribe
 
 [![Build Status](https://travis-ci.org/sharetribe/sharetribe.svg?branch=master)](https://travis-ci.org/sharetribe/sharetribe) [![Dependency Status](https://gemnasium.com/sharetribe/sharetribe.png)](https://gemnasium.com/sharetribe/sharetribe) [![Code Climate](https://codeclimate.com/github/sharetribe/sharetribe.png)](https://codeclimate.com/github/sharetribe/sharetribe) [![Coverage Status](https://coveralls.io/repos/sharetribe/sharetribe/badge.png)](https://coveralls.io/r/sharetribe/sharetribe)
