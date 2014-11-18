@@ -710,7 +710,8 @@ function initialize_reply_form(locale) {
 function initialize_listing_view(locale) {
   $('.add-item-btn').click(function(){
     var item = $(this)[0].attributes.data.value;
-    $.post("/carts/add?community_id=1", {"item_id" : item}, function(data) {
+    var req_quant = $('#req_quant').val();
+    $.post("/carts/add?community_id=1", {"item_id": item, "req_qaunt": req_quant}, function(data) {
       console.log(data);
     });
   });
