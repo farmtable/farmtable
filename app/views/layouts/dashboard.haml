@@ -2,7 +2,7 @@
  
 %body
 
-  %header.global-header.network-header
+  %header.global-header.network-header#network-nav
     .header-wrapper
       .network-header-content-container
         .left-side
@@ -35,13 +35,13 @@
             %li= link_to "CONTACT", "mailto:paul@gofarmtable.com", :class => "global-navi-right"
         .right-side
           .company-name
-            FarmTable
-          %a.social-icon-circle{:href => "https://www.facebook.com/Sharetribe"}
-            .ss-facebook.ss-icon.ss-social
-          %a.social-icon-circle{:href => "https://twitter.com/sharetribe"}
-            .ss-twitter.ss-icon.ss-social
-          %a.social-icon-circle{:href => "https://plus.google.com/115623351324372170386"}
-            .ss-googleplus.ss-icon.ss-social
+            © FarmTable 2014
+          / %a.social-icon-circle{:href => "https://www.facebook.com/Sharetribe"}
+          /   .ss-facebook.ss-icon.ss-social
+          / %a.social-icon-circle{:href => "https://twitter.com/sharetribe"}
+          /   .ss-twitter.ss-icon.ss-social
+          / %a.social-icon-circle{:href => "https://plus.google.com/115623351324372170386"}
+          /   .ss-googleplus.ss-icon.ss-social
 
   = javascript_include_tag 'application'
   = yield(:extra_javascript)

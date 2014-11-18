@@ -4,7 +4,7 @@
 %meta{ :name => "keywords", :content => "Marketplace, FarmTable, How to create a marketplace, Create a marketplace website, Online marketplace, Create an online marketplace, Peer-to-peer marketplace" }
 %meta{ :property => "og:title", :content => "FarmTable"}
 %meta{ :property => "og:url", :content =>"#{request.protocol}#{request.host}#{request.fullpath}"}
-%meta{ :property => "og:image", :content => "https://s3.amazonaws.com/sharetribe/assets/sharetribe_icon.png"}
+/ %meta{ :property => "og:image", :content => "https://s3.amazonaws.com/sharetribe/assets/sharetribe_icon.png"}
 %meta{ :property => "og:site_name", :content =>"#{service_name}"}
 %meta{ :property => "og:description", :content => t("layouts.application.meta_description")}
 %meta{ :"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
@@ -18,6 +18,8 @@
 
 / Modernizr, in the head tag, right after stylesheets, for best performance:
 = javascript_include_tag "modernizr.min"
+/ = javascript_include_tag "landing"
+
 
 / Android pre Jellybean has an ugly bug, which prevents font-size 0 technique from
 / removing the spaces between inline-blocks. Remove this piece of code when pre Jellybean becomes unsupported
@@ -34,4 +36,4 @@
 
 %link{:rel => "image_src", :href => "https://s3.amazonaws.com/sharetribe/assets/dashboard/sharetribe_logo.png"}
 
-%link{:rel => "shortcut icon", :href => "/assets/favicon.ico"}
+%link{:rel => "shortcut icon", :href => "/assets/favicon.png"}
